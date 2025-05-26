@@ -56,3 +56,82 @@ h1 {
 p {
     line-height: 1.6;
 }
+
+.intro {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.course-overview {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.features li:before {
+    content: "✓";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+}
+
+.course-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.course-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.course-card li {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.getting-started {
+    background: #E3F2FD;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.getting-started ul {
+    margin-top: 1rem;
+    padding-left: 2rem;
+}
+
+.getting-started li {
+    margin: 0.5rem 0;
+}
