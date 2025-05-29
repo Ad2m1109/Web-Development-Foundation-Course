@@ -8,6 +8,7 @@ A comprehensive web development course covering HTML and CSS fundamentals, desig
 - Introduction to HTML
 - Basic HTML Elements
 - Text Formatting
+- Links & Images
 - Lists & Tables
 - Forms
 - Semantic HTML
@@ -15,17 +16,19 @@ A comprehensive web development course covering HTML and CSS fundamentals, desig
 ### CSS Section
 - Introduction to CSS
 - Selectors & Properties
+- Colors
+- Text Styling
 - Box Model
-- Layout & Positioning
-- Flexbox & Grid
+- Layout (Flexbox & Grid)
 - Responsive Design
+- Transitions & Animations
 
 ## Getting Started
 
 1. Clone this repository
 2. Open `index.html` in your browser
 3. Navigate through chapters using the sidebar
-4. Practice with provided examples
+4. Practice with provided interactive examples
 
 ## Reference Materials
 
@@ -36,19 +39,24 @@ A comprehensive web development course covering HTML and CSS fundamentals, desig
 
 ```
 web-foundation-course/
-├── index.html          # Main course page
-├── main.css           # Styles for course interface
-├── HTML.md            # HTML reference guide
-├── CSS.md            # CSS reference guide
-└── README.md         # This file
+├── index.html           # Main course page
+├── html-course.html     # Interactive HTML lessons
+├── css-course.html      # Interactive CSS lessons
+├── main.css             # Styles for course interface
+├── script.js            # JS for HTML live preview
+├── css-script.js        # JS for CSS live preview
+├── HTML.md              # HTML reference guide
+├── CSS.md               # CSS reference guide
+└── README.md            # This file
 ```
 
 ## How to Use
 
 1. **Navigation**: Use the sidebar to move between different topics
-2. **Practice**: Each section includes practical examples
+2. **Practice**: Each section includes interactive examples and exercises
 3. **Reference**: Consult the reference guides for quick lookups
 4. **Examples**: Copy and modify code examples to learn
+5. **Preview**: Write code in the editor and use the preview button to see results instantly
 
 ## Prerequisites
 
@@ -59,8 +67,8 @@ web-foundation-course/
 ## Learning Path
 
 1. Start with HTML basics
-2. Progress through HTML elements
-3. Move to CSS fundamentals
+2. Progress through HTML elements: text, links, lists, tables, forms, semantic elements
+3. Move to CSS fundamentals: selectors, colors, text, box model, layout, responsive design, transitions & animations
 4. Practice layouts and styling
 5. Complete exercises in each section
 
