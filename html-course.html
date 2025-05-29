@@ -23,10 +23,253 @@
     </nav>
     <main class="content course-content">
         <h1>HTML Reference Guide</h1>
+        
+        <!-- Document Structure Section -->
         <section id="document-structure">
-            <!-- Content from HTML.md -->
+            <div class="lesson-intro">
+                <h2>Document Structure</h2>
+                <p>Let's learn how to create the basic structure of an HTML document. Every HTML document needs essential elements to be properly structured.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Basic HTML Structure</h3>
+                <pre class="code-example">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Content goes here
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+
+                <div class="element-explanations">
+                    <ul>
+                        <li><strong>&lt;!DOCTYPE html&gt;</strong> - Declares that this is an HTML5 document</li>
+                        <li><strong>&lt;html&gt;</strong> - The root element of the page</li>
+                        <li><strong>&lt;head&gt;</strong> - Contains metadata about the document</li>
+                        <li><strong>&lt;title&gt;</strong> - Sets the page title in browser tab</li>
+                        <li><strong>&lt;body&gt;</strong> - Contains the visible page content</li>
+                    </ul>
+                </div>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Try creating a basic HTML document structure with the following requirements:</p>
+                    <ul class="exercise-requirements">
+                        <li>Set the page title to "My Learning Page"</li>
+                        <li>Add a heading inside the body that says "Welcome to my first page"</li>
+                        <li>Add a paragraph below the heading with any text you want</li>
+                    </ul>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- Additional sections -->
+
+        <!-- Text Elements Section -->
+        <section id="text-elements">
+            <div class="lesson-intro">
+                <h2>Text Elements</h2>
+                <p>Learn about the different HTML elements used for text formatting and structure.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Headings and Paragraphs</h3>
+                <pre class="code-example">
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+&lt;strong&gt;Bold text&lt;/strong&gt;
+&lt;em&gt;Italic text&lt;/em&gt;
+                </pre>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Create a text structure with different heading levels and text formatting:</p>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links and Images Section -->
+        <section id="links-images">
+            <div class="lesson-intro">
+                <h2>Links and Images</h2>
+                <p>Learn how to add links and images to your web pages.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Basic Links and Images</h3>
+                <pre class="code-example">
+&lt;a href="https://www.example.com"&gt;Click here&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description of image"&gt;
+                </pre>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Create a page with links and images:</p>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lists Section -->
+        <section id="lists">
+            <div class="lesson-intro">
+                <h2>Lists</h2>
+                <p>Understand how to use lists in HTML to organize content.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Creating Lists</h3>
+                <pre class="code-example">
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+                </pre>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Make a list of your favorite fruits using an unordered list:</p>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tables Section -->
+        <section id="tables">
+            <div class="lesson-intro">
+                <h2>Tables</h2>
+                <p>Learn how to create tables to display data in a structured format.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Basic Table Structure</h3>
+                <pre class="code-example">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                </pre>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Create a table to display your weekly schedule:</p>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms">
+            <div class="lesson-intro">
+                <h2>Forms</h2>
+                <p>Understand how to create forms to collect user input.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Basic Form Elements</h3>
+                <pre class="code-example">
+&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+                </pre>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Build a contact form with fields for name, email, and message:</p>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Semantic Elements Section -->
+        <section id="semantic">
+            <div class="lesson-intro">
+                <h2>Semantic Elements</h2>
+                <p>Learn about semantic HTML elements that provide meaning to the content.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>Common Semantic Elements</h3>
+                <pre class="code-example">
+&lt;header&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;Article content goes here.&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright 2023&lt;/p&gt;
+&lt;/footer&gt;
+                </pre>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Structure a simple webpage using semantic elements:</p>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
