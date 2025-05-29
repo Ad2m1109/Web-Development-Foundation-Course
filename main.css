@@ -4,70 +4,115 @@
     box-sizing: border-box;
 }
 
-body {
+.app-body {
     display: flex;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', 'Fira Sans', 'Roboto', Arial, sans-serif;
+    background: #181A1B;
+    color: #E0E0E0;
+    min-height: 100vh;
 }
 
 .sidebar {
-    width: 250px;
+    width: 260px;
     height: 100vh;
-    background-color: #282A35;
-    color: white;
+    background: #23272F;
+    color: #F8F8F2;
     position: fixed;
-    padding: 20px 0;
+    padding: 0;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
 }
 
 .logo {
     text-align: center;
-    font-size: 24px;
-    padding: 10px;
-    border-bottom: 1px solid #404040;
+    font-size: 2rem;
+    padding: 24px 0 18px 0;
+    border-bottom: 1px solid #343746;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: #23272F;
 }
 
 .nav-links {
     list-style: none;
-    padding: 20px 0;
+    padding: 0;
+    margin-top: 24px;
+}
+
+.nav-links li {
+    margin-bottom: 8px;
 }
 
 .nav-links li a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 32px;
+    color: #F8F8F2;
     text-decoration: none;
-    transition: background-color 0.3s;
+    font-size: 1.08rem;
+    border-left: 4px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
 }
 
-.nav-links li a:hover {
-    background-color: #404040;
+.nav-links li a:hover,
+.nav-links li a.active {
+    background: #282A36;
+    border-left: 4px solid #50FA7B;
+    color: #50FA7B;
 }
 
 .content {
-    margin-left: 250px;
-    padding: 40px;
-    width: calc(100% - 250px);
+    margin-left: 260px;
+    padding: 48px 5vw 48px 5vw;
+    width: calc(100% - 260px);
+    background: #1E2124;
+    min-height: 100vh;
 }
 
-h1 {
-    color: #282A35;
-    margin-bottom: 20px;
+.app-h1, .app-h2, .app-h3 {
+    color: #50FA7B;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-p {
-    line-height: 1.6;
+.app-h1 {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+}
+
+.app-h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.app-h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.app-p, .app-li {
+    color: #CFCFCF;
 }
 
 .intro {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
+    font-size: 1.18rem;
+    color: #B0BEC5;
+    margin-bottom: 2.2rem;
 }
 
-.course-overview {
-    background: #f5f5f5;
+.course-overview,
+.getting-started,
+.practice-exercise {
+    background: #23272F;
     padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    border: 1px solid #282A36;
 }
 
 .features {
@@ -76,37 +121,40 @@ p {
 }
 
 .features li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
+    padding: 0.5rem 0 0.5rem 2rem;
     position: relative;
+    color: #8BE9FD;
 }
 
 .features li:before {
-    content: "✓";
-    color: #4CAF50;
+    content: "💡";
+    color: #50FA7B;
     position: absolute;
     left: 0;
 }
 
 .course-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
 }
 
 .course-card {
-    background: white;
+    background: #282A36;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
     text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s;
+    color: #F8F8F2;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #343746;
 }
 
 .course-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(80,250,123,0.07);
+    border-color: #50FA7B;
 }
 
 .course-card ul {
@@ -117,13 +165,12 @@ p {
 
 .course-card li {
     margin: 0.5rem 0;
-    color: #666;
+    color: #8BE9FD;
 }
 
 .getting-started {
-    background: #E3F2FD;
-    padding: 2rem;
-    border-radius: 8px;
+    background: #23272F;
+    border-left: 5px solid #50FA7B;
     margin-top: 3rem;
 }
 
@@ -134,6 +181,7 @@ p {
 
 .getting-started li {
     margin: 0.5rem 0;
+    color: #F1FA8C;
 }
 
 .lesson-content {
@@ -141,14 +189,22 @@ p {
 }
 
 .code-example {
-    background: #f5f5f5;
+    background: #282A36;
+    color: #F8F8F2;
     padding: 1.5rem;
-    border-radius: 4px;
-    font-family: monospace;
+    border-radius: 6px;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
     white-space: pre;
-    margin: 1rem 0;
-    border: 1px solid #ddd;
+    margin: 1.2rem 0;
+    border: 1px solid #343746;
+    font-size: 1.04rem;
+    overflow-x: auto;
 }
+
+.code-example .token.selector { color: #8BE9FD; }
+.code-example .token.property { color: #F1FA8C; }
+.code-example .token.value { color: #50FA7B; }
+.code-example .token.comment { color: #6272A4; }
 
 .element-explanations {
     margin: 1.5rem 0;
@@ -161,67 +217,144 @@ p {
 
 .element-explanations li {
     margin: 0.5rem 0;
+    color: #F1FA8C;
 }
 
 .practice-exercise {
-    background: #fff8e1;
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
+    background: #23272F;
+    border-left: 5px solid #8BE9FD;
+    margin: 2.5rem 0;
 }
 
 .exercise-requirements {
     margin: 1rem 0;
     padding-left: 2rem;
+    color: #F1FA8C;
 }
 
 .exercise-workspace {
     margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .code-editor {
     width: 100%;
+    min-width: 320px;
+    max-width: 480px;
     min-height: 200px;
-    font-family: monospace;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    font-size: 1.05rem;
     padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    border: 1px solid #343746;
+    border-radius: 6px;
+    margin-bottom: 0;
+    background: #23272F;
+    color: #F8F8F2;
+    resize: vertical;
+    flex: 1 1 0;
 }
 
 .preview-btn {
-    background: #4CAF50;
-    color: white;
+    background: linear-gradient(90deg, #50FA7B 60%, #8BE9FD 100%);
+    color: #23272F;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.6rem 1.3rem;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(80,250,123,0.08);
+    transition: background 0.2s, color 0.2s;
+    display: block;
+    margin: 1rem 0 0 0;
 }
 
 .preview-btn:hover {
-    background: #45a049;
+    background: linear-gradient(90deg, #8BE9FD 60%, #50FA7B 100%);
+    color: #181A1B;
 }
 
 .preview-area {
-    margin-top: 1rem;
+    margin-top: 0;
     padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    min-height: 100px;
-    background: white;
+    border-radius: 6px;
+    min-height: 200px;
+    background: #fff;
+    color: #222;
+    font-family: inherit;
+    font-size: 1.02rem;
+    flex: 1 1 0;
+    max-width: 480px;
+    overflow-x: auto;
 }
 
 .exercise-hint {
-    background: #e3f2fd;
-    border-left: 4px solid #2196F3;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.98rem;
+    background: #2B2E33;
+    color: #9CDCFE;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    border: 1px solid #343746;
 }
 
 .exercise-hint code {
-    background: #f5f5f5;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-size: 0.97em;
+    background: #1E2124;
+    color: #50FA7B;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+    .exercise-workspace {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .code-editor, .preview-area {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 60px;
+        min-width: 60px;
+        padding: 0;
+    }
+    .logo {
+        font-size: 1.2rem;
+        padding: 18px 0;
+    }
+    .nav-links li a {
+        padding: 12px 10px;
+        font-size: 1.1rem;
+        justify-content: center;
+    }
+    .content {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+        padding: 32px 2vw 32px 2vw;
+    }
+    .course-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 18px 2vw 18px 2vw;
+    }
 }
