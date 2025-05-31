@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Document Structure - HTML Course</title>
+    <link rel='stylesheet' href='main.css'>
+    <style>
+        .nav-links a.active {
+            background-color: #4a5568;
+            color: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="app-body">
+    <nav class="sidebar">
+        <div class="logo">
+            <a href="index.html">Web Course</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#document-structure"><span>📄</span> Document Structure</a></li>
+            <li><a href="#text-elements"><span>📝</span> Text Elements</a></li>
+            <li><a href="#links-images"><span>🔗</span> Links & Images</a></li>
+            <li><a href="#lists"><span>📋</span> Lists</a></li>
+            <li><a href="#tables"><span>📊</span> Tables</a></li>
+            <li><a href="#forms"><span>🧾</span> Forms</a></li>
+            <li><a href="#semantic"><span>🏷️</span> Semantic</a></li>
+        </ul>
+    </nav>
+    <main class="content course-content">
+        <h1 class="app-h1">Document Structure</h1>
+        
+        <!-- Document Structure Section -->
+        <section id="document-structure">
+            <div class="lesson-intro">
+                <h2 class="app-h2">Document Structure</h2>
+                <p class="app-p">Let's learn how to create the basic structure of an HTML document. Every HTML document needs essential elements to be properly structured.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3 class="app-h3">Basic HTML Structure</h3>
+                <pre class="code-example">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Content goes here
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+
+                <div class="element-explanations">
+                    <ul>
+                        <li class="app-li"><strong>&lt;!DOCTYPE html&gt;</strong> - Declares that this is an HTML5 document</li>
+                        <li class="app-li"><strong>&lt;html&gt;</strong> - The root element of the page</li>
+                        <li class="app-li"><strong>&lt;head&gt;</strong> - Contains metadata about the document</li>
+                        <li class="app-li"><strong>&lt;title&gt;</strong> - Sets the page title in browser tab</li>
+                        <li class="app-li"><strong>&lt;body&gt;</strong> - Contains the visible page content</li>
+                    </ul>
+                </div>
+
+                <div class="practice-exercise">
+                    <h3>Practice Exercise</h3>
+                    <p>Try creating a basic HTML document structure with the following requirements:</p>
+                    <ul class="exercise-requirements">
+                        <li>Set the page title to "My Learning Page"</li>
+                        <li>Add a heading inside the body that says "Welcome to my first page"</li>
+                        <li>Add a paragraph below the heading with any text you want</li>
+                    </ul>
+                    <div class="exercise-workspace">
+                        <textarea class="code-editor" rows="10" placeholder="Write your HTML here..."></textarea>
+                        <button class="preview-btn">Preview Result</button>
+                        <div class="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a class="nav-button prev" href="html-course.html">← Back to Introduction</a>
+            <a class="nav-button next" href="text-elements.html">Next: Text Elements →</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

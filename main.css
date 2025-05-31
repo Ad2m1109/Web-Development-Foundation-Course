@@ -311,6 +311,37 @@
     border-radius: 4px;
 }
 
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid #343746;
+}
+
+.nav-button {
+    padding: 0.8rem 1.5rem;
+    background: #282A36;
+    color: #50FA7B;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+    border: 1px solid #50FA7B;
+}
+
+.nav-button:hover {
+    background: #50FA7B;
+    color: #282A36;
+}
+
+.nav-button.next {
+    margin-left: auto;
+}
+
+.nav-button.prev {
+    margin-right: auto;
+}
+
 /* Responsive: stack vertically on small screens */
 @media (max-width: 900px) {
     .exercise-workspace {
