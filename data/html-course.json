@@ -153,6 +153,208 @@
           }
         }
       }
+    },
+    {
+      "id": "text-elements",
+      "icon": "📝",
+      "title": "Text Elements",
+      "description": "All text-related HTML elements",
+      "content": {
+        "title": "Working with Text",
+        "codeExample": "<h1>Main Heading</h1>\n<h2>Subheading</h2>\n<p>Regular paragraph with <strong>bold</strong> and <em>italic</em> text.</p>\n<p>Text with <mark>highlight</mark>, <sub>subscript</sub>, and <sup>superscript</sup></p>\n<blockquote>This is a quote</blockquote>\n<pre>Preformatted\n    text</pre>\n<code>const code = 'example';</code>\n<br><hr>",
+        "exercise": {
+          "instructions": "Create a page using different text elements",
+          "defaultHtml": "<!-- Use various text elements -->",
+          "hint": {
+            "elements": [
+              "<h1> to <h6>",
+              "<p>, <pre>",
+              "<strong>, <em>, <mark>",
+              "<sub>, <sup>",
+              "<blockquote>",
+              "<code>, <br>, <hr>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "lists",
+      "icon": "📋",
+      "title": "Lists",
+      "description": "All types of HTML lists",
+      "content": {
+        "title": "HTML Lists",
+        "codeExample": "<!-- Unordered List -->\n<ul>\n    <li>Item 1</li>\n    <li>Item 2</li>\n</ul>\n\n<!-- Ordered List -->\n<ol>\n    <li>First</li>\n    <li>Second</li>\n</ol>\n\n<!-- Description List -->\n<dl>\n    <dt>Term</dt>\n    <dd>Description</dd>\n</dl>",
+        "exercise": {
+          "instructions": "Create different types of lists",
+          "defaultHtml": "<!-- Create ordered and unordered lists -->",
+          "hint": {
+            "elements": [
+              "<ul>, <ol>, <dl>",
+              "<li>",
+              "<dt>, <dd>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "advanced-links",
+      "icon": "🔗",
+      "title": "Advanced Links",
+      "description": "Advanced link attributes and types",
+      "content": {
+        "title": "Link Types and Attributes",
+        "codeExample": "<!-- External Links -->\n<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener\">External Link</a>\n\n<!-- Internal Links -->\n<a href=\"#section\">Jump to Section</a>\n\n<!-- Download Links -->\n<a href=\"file.pdf\" download>Download PDF</a>\n\n<!-- Email & Phone Links -->\n<a href=\"mailto:email@example.com\">Email Us</a>\n<a href=\"tel:+1234567890\">Call Us</a>",
+        "exercise": {
+          "instructions": "Create different types of links",
+          "defaultHtml": "<!-- Add various types of links -->",
+          "hint": {
+            "elements": [
+              "<a href=\"\">",
+              "target=\"_blank\"",
+              "rel=\"noopener\"",
+              "mailto: and tel:",
+              "download attribute"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "media",
+      "icon": "🎬",
+      "title": "Media Elements",
+      "description": "Images, Audio, and Video elements",
+      "content": {
+        "title": "Media in HTML",
+        "codeExample": "<!-- Images -->\n<img src=\"image.jpg\" alt=\"Description\" width=\"300\" loading=\"lazy\">\n<picture>\n    <source media=\"(min-width:800px)\" srcset=\"large.jpg\">\n    <img src=\"small.jpg\" alt=\"Responsive image\">\n</picture>\n\n<!-- Audio -->\n<audio controls>\n    <source src=\"audio.mp3\" type=\"audio/mpeg\">\n    Your browser does not support audio.\n</audio>\n\n<!-- Video -->\n<video width=\"320\" height=\"240\" controls>\n    <source src=\"video.mp4\" type=\"video/mp4\">\n    Your browser does not support video.\n</video>",
+        "exercise": {
+          "instructions": "Add different types of media",
+          "defaultHtml": "<!-- Add images, audio, and video -->",
+          "hint": {
+            "elements": [
+              "<img>",
+              "<picture>, <source>",
+              "<audio>",
+              "<video>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "advanced-forms",
+      "icon": "📋",
+      "title": "Advanced Forms",
+      "description": "Comprehensive form elements and attributes",
+      "content": {
+        "title": "Form Elements",
+        "codeExample": "<form action=\"/submit\" method=\"post\">\n    <!-- Text Inputs -->\n    <input type=\"text\" placeholder=\"Username\">\n    <input type=\"password\" required>\n    <input type=\"email\" pattern=\".+@.+\\..+\">\n    \n    <!-- Numbers & Dates -->\n    <input type=\"number\" min=\"0\" max=\"100\">\n    <input type=\"range\" min=\"0\" max=\"10\">\n    <input type=\"date\">\n    \n    <!-- Selections -->\n    <select multiple>\n        <optgroup label=\"Group 1\">\n            <option>Option 1</option>\n        </optgroup>\n    </select>\n    \n    <!-- Checkboxes & Radio -->\n    <input type=\"checkbox\" checked>\n    <input type=\"radio\" name=\"group\">\n    \n    <!-- Text Areas -->\n    <textarea rows=\"4\" cols=\"50\"></textarea>\n    \n    <!-- Buttons -->\n    <button type=\"submit\">Submit</button>\n    <button type=\"reset\">Reset</button>\n</form>",
+        "exercise": {
+          "instructions": "Create a form with various input types",
+          "defaultHtml": "<!-- Create an advanced form -->",
+          "hint": {
+            "elements": [
+              "All input types",
+              "<select>, <option>",
+              "<textarea>",
+              "Form attributes",
+              "Validation attributes"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meta-info",
+      "icon": "ℹ️",
+      "title": "Meta Information",
+      "description": "Understanding HTML metadata and document information",
+      "content": {
+        "title": "Meta Tags and Document Information",
+        "codeExample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta name=\"description\" content=\"Page description\">\n    <link rel=\"stylesheet\" href=\"styles.css\">\n    <title>Page Title</title>\n</head>\n<body>\n    <!-- Content here -->\n</body>\n</html>",
+        "exercise": {
+          "instructions": "Create an HTML document with proper meta tags",
+          "defaultHtml": "<!-- Add meta tags and document info -->",
+          "hint": {
+            "elements": [
+              "<meta>",
+              "<link>",
+              "<style>",
+              "<script>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "interactive",
+      "icon": "🔄",
+      "title": "Interactive Elements",
+      "description": "Working with interactive HTML5 elements",
+      "content": {
+        "title": "Interactive Components",
+        "codeExample": "<details>\n    <summary>Click to expand</summary>\n    <p>Hidden content here</p>\n</details>\n\n<dialog id=\"myDialog\">\n    <h2>Dialog Title</h2>\n    <p>Dialog content</p>\n    <button>Close</button>\n</dialog>\n\n<menu>\n    <menuitem>Option 1</menuitem>\n    <menuitem>Option 2</menuitem>\n</menu>",
+        "exercise": {
+          "instructions": "Create interactive elements using details, dialog, and menu",
+          "defaultHtml": "<!-- Add interactive elements -->",
+          "hint": {
+            "elements": [
+              "<details>, <summary>",
+              "<dialog>",
+              "<menu>, <menuitem>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "html5-apis",
+      "icon": "🎨",
+      "title": "HTML5 APIs",
+      "description": "Modern HTML5 API elements",
+      "content": {
+        "title": "HTML5 API Elements",
+        "codeExample": "<canvas id=\"myCanvas\"></canvas>\n\n<svg width=\"100\" height=\"100\">\n    <circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" fill=\"red\" />\n</svg>\n\n<template id=\"myTemplate\">\n    <h2>Template Content</h2>\n</template>\n\n<progress value=\"70\" max=\"100\">70%</progress>\n<meter value=\"0.6\">60%</meter>",
+        "exercise": {
+          "instructions": "Create elements using HTML5 APIs",
+          "defaultHtml": "<!-- Add HTML5 API elements -->",
+          "hint": {
+            "elements": [
+              "<canvas>",
+              "<svg>",
+              "<template>",
+              "<progress>",
+              "<meter>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "form-validation",
+      "icon": "✅",
+      "title": "Form Validation",
+      "description": "HTML5 form validation attributes",
+      "content": {
+        "title": "Form Validation Features",
+        "codeExample": "<form>\n    <input type=\"text\" required minlength=\"3\" maxlength=\"10\">\n    <input type=\"number\" min=\"0\" max=\"100\" step=\"5\">\n    <input type=\"email\" pattern=\".+@.+\\..+\">\n    <input type=\"tel\" pattern=\"[0-9]{10}\">\n    <button type=\"submit\">Submit</button>\n</form>",
+        "exercise": {
+          "instructions": "Create a form with various validation attributes",
+          "defaultHtml": "<!-- Add form with validation -->",
+          "hint": {
+            "elements": [
+              "required",
+              "pattern",
+              "min/max",
+              "minlength/maxlength",
+              "step"
+            ]
+          }
+        }
+      }
     }
   ]
 }
