@@ -114,3 +114,60 @@
 <input type="file">        <!-- File upload -->
 <input type="date">        <!-- Date picker -->
 ```
+
+## Accessibility Elements
+```html
+<main>                <!-- Main content of page -->
+<article>             <!-- Self-contained content -->
+<section>             <!-- Thematic grouping -->
+<nav>                 <!-- Navigation links -->
+<aside>               <!-- Sidebar content -->
+<header>              <!-- Header content -->
+<footer>              <!-- Footer content -->
+<figure>              <!-- Self-contained content -->
+<figcaption>          <!-- Caption for figure -->
+<dialog>              <!-- Interactive component -->
+```
+
+## Interactive Elements
+```html
+<details>             <!-- Disclosure widget -->
+<summary>             <!-- Summary/heading for details -->
+<dialog>              <!-- Dialog box/modal -->
+<menu>                <!-- Menu list -->
+<menuitem>            <!-- Menu item -->
+```
+
+## HTML5 APIs
+```html
+<canvas>              <!-- Drawing graphics -->
+<svg>                 <!-- Scalable vector graphics -->
+<template>            <!-- Hidden content template -->
+<slot>                <!-- Template placeholder -->
+<output>              <!-- Calculation result -->
+<progress>            <!-- Progress indicator -->
+<meter>               <!-- Scalar measurement -->
+```
+
+## Additional Input Types
+```html
+<input type="color">      <!-- Color picker -->
+<input type="range">      <!-- Range slider -->
+<input type="search">     <!-- Search box -->
+<input type="tel">        <!-- Telephone number -->
+<input type="time">       <!-- Time picker -->
+<input type="url">        <!-- URL input -->
+<input type="week">       <!-- Week picker -->
+<input type="month">      <!-- Month picker -->
+<input type="datetime-local"> <!-- Date and time -->
+```
+
+## Form Validation Attributes
+- `required`: Field must be filled
+- `pattern`: Regex pattern
+- `minlength`: Minimum length
+- `maxlength`: Maximum length
+- `min`: Minimum value
+- `max`: Maximum value
+- `step`: Number intervals
+- `novalidate`: Disable validation

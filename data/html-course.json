@@ -1,0 +1,158 @@
+{
+  "title": "HTML Course",
+  "sections": [
+    {
+      "id": "intro",
+      "icon": "📝",
+      "title": "Introduction to HTML",
+      "description": "Learn the basics of HTML and its role in web development",
+      "content": {
+        "title": "Getting Started with HTML",
+        "codeExample": "<!DOCTYPE html>\n<html>\n<head>\n    <title>My First Page</title>\n</head>\n<body>\n    <h1>Hello World!</h1>\n</body>\n</html>",
+        "exercise": {
+          "instructions": "Create a simple HTML page with a heading and a paragraph",
+          "defaultHtml": "<h1>Welcome</h1>\n<p>This is my first HTML page</p>",
+          "hint": {
+            "elements": [
+              "<h1>",
+              "<p>",
+              "<body>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "structure",
+      "icon": "🏗️",
+      "title": "HTML Structure",
+      "description": "Understanding HTML document structure",
+      "content": {
+        "title": "Document Structure",
+        "codeExample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Document</title>\n</head>\n<body>\n    <!-- Content goes here -->\n</body>\n</html>",
+        "exercise": {
+          "instructions": "Create a properly structured HTML document",
+          "defaultHtml": "<!-- Add your HTML structure here -->",
+          "hint": {
+            "elements": [
+              "<!DOCTYPE html>",
+              "<html>",
+              "<head>",
+              "<body>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "elements",
+      "icon": "📑",
+      "title": "Basic Elements",
+      "description": "Learn about fundamental HTML elements",
+      "content": {
+        "title": "Common HTML Elements",
+        "codeExample": "<h1>Main Heading</h1>\n<h2>Subheading</h2>\n<p>This is a paragraph with <strong>bold</strong> and <em>italic</em> text.</p>\n<ul>\n    <li>List item 1</li>\n    <li>List item 2</li>\n</ul>",
+        "exercise": {
+          "instructions": "Create a page with different headings, paragraphs, and a list",
+          "defaultHtml": "<!-- Add headings, paragraphs and a list -->",
+          "hint": {
+            "elements": [
+              "<h1> to <h6>",
+              "<p>",
+              "<ul> and <li>",
+              "<strong>, <em>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "links-images",
+      "icon": "🔗",
+      "title": "Links & Images",
+      "description": "Working with hyperlinks and images",
+      "content": {
+        "title": "Adding Links and Images",
+        "codeExample": "<a href=\"https://example.com\">Visit Example</a>\n<img src=\"image.jpg\" alt=\"Description\" width=\"300\" height=\"200\">",
+        "exercise": {
+          "instructions": "Create a page with links and images",
+          "defaultHtml": "<!-- Add links and images here -->",
+          "hint": {
+            "elements": [
+              "<a href=\"\">",
+              "<img src=\"\" alt=\"\">",
+              "Relative/absolute paths"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "forms",
+      "icon": "📝",
+      "title": "Forms",
+      "description": "Creating interactive forms",
+      "content": {
+        "title": "HTML Forms",
+        "codeExample": "<form action=\"/submit\" method=\"post\">\n    <label for=\"name\">Name:</label>\n    <input type=\"text\" id=\"name\" name=\"name\" required>\n    \n    <label for=\"email\">Email:</label>\n    <input type=\"email\" id=\"email\" name=\"email\">\n    \n    <button type=\"submit\">Submit</button>\n</form>",
+        "exercise": {
+          "instructions": "Create a contact form with various input types",
+          "defaultHtml": "<!-- Create your form here -->",
+          "hint": {
+            "elements": [
+              "<form>",
+              "<input>",
+              "<label>",
+              "<button>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "tables",
+      "icon": "📊",
+      "title": "Tables",
+      "description": "Creating data tables",
+      "content": {
+        "title": "HTML Tables",
+        "codeExample": "<table>\n    <thead>\n        <tr>\n            <th>Header 1</th>\n            <th>Header 2</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Data 1</td>\n            <td>Data 2</td>\n        </tr>\n    </tbody>\n</table>",
+        "exercise": {
+          "instructions": "Create a table with headers and multiple rows",
+          "defaultHtml": "<!-- Create your table here -->",
+          "hint": {
+            "elements": [
+              "<table>",
+              "<thead>, <tbody>",
+              "<tr>, <th>, <td>"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "semantic",
+      "icon": "🏷️",
+      "title": "Semantic HTML",
+      "description": "Using semantic elements for better structure",
+      "content": {
+        "title": "Semantic Elements",
+        "codeExample": "<header>\n    <nav>Navigation</nav>\n</header>\n<main>\n    <article>\n        <section>Content</section>\n    </article>\n</main>\n<footer>Page Footer</footer>",
+        "exercise": {
+          "instructions": "Create a page using semantic HTML elements",
+          "defaultHtml": "<!-- Create semantic structure -->",
+          "hint": {
+            "elements": [
+              "<header>",
+              "<nav>",
+              "<main>",
+              "<article>",
+              "<section>",
+              "<footer>"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
