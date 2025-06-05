@@ -40,15 +40,43 @@ A comprehensive web development course covering HTML and CSS fundamentals, desig
 ```
 web-foundation-course/
 ├── index.html           # Main course page
-├── html-course.html     # Interactive HTML lessons
-├── css-course.html      # Interactive CSS lessons
-├── main.css             # Styles for course interface
-├── script.js            # JS for HTML live preview
-├── css-script.js        # JS for CSS live preview
-├── HTML.md              # HTML reference guide
-├── CSS.md               # CSS reference guide
-└── README.md            # This file
+├── data/               # Course content
+│   ├── html-course.json # HTML course data
+│   └── css-course.json  # CSS course data
+├── html/               # HTML course files
+│   ├── html-course.html # Interactive HTML lessons
+│   ├── html-script.js   # HTML course logic
+│   ├── HTML.md         # HTML reference guide
+│   └── certification.tex # HTML course certificate
+├── css/                # CSS course files
+│   ├── css-course.html # Interactive CSS lessons
+│   ├── css-script.js   # CSS course logic
+│   ├── CSS.md         # CSS reference guide
+│   └── certification.tex # CSS course certificate
+├── main.css           # Global styles
+├── script.js          # Global scripts
+└── README.md          # Project documentation
 ```
+
+## Features
+
+1. **Interactive Learning**
+   - Live code editors
+   - Real-time preview
+   - Practice exercises
+   - Step-by-step tutorials
+
+2. **Comprehensive Content**
+   - HTML5 modern elements
+   - CSS3 latest features
+   - Best practices
+   - Accessibility guidelines
+
+3. **Course Completion**
+   - Course progress tracking
+   - Interactive exercises
+   - Course certificates
+   - Reference materials
 
 ## How to Use
 
@@ -71,6 +99,17 @@ web-foundation-course/
 3. Move to CSS fundamentals: selectors, colors, text, box model, layout, responsive design, transitions & animations
 4. Practice layouts and styling
 5. Complete exercises in each section
+
+## Certificates
+
+Upon completion of each course:
+1. HTML Certificate - Covers all HTML5 fundamentals
+2. CSS Certificate - Covers modern CSS techniques
+
+To generate certificates:
+1. Complete all course sections
+2. Run the LaTeX certificate generator
+3. Download your personalized certificate
 
 ## Contributing
 
