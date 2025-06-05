@@ -1,0 +1,131 @@
+\documentclass[landscape]{article}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns,shadows}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{helvet}
+\usepackage{textcomp}
+\usepackage{fontawesome5}
+
+\geometry{a4paper, margin=1cm}
+
+\definecolor{primary}{RGB}{34, 139, 230}     % Modern blue
+\definecolor{secondary}{RGB}{16, 185, 129}   % Emerald green
+\definecolor{accent}{RGB}{245, 101, 101}     % Coral red
+\definecolor{darkgray}{RGB}{55, 65, 81}      % Dark gray
+\definecolor{lightgray}{RGB}{243, 244, 246}  % Light gray
+\definecolor{gold}{RGB}{251, 191, 36}        % Gold accent
+
+\newcommand{\modernsignatureline}[1]{%
+    \begin{tikzpicture}
+    \draw[primary, line width=1.5pt, rounded corners=1pt] (0,0) -- (5.5,0);
+    \node[below, darkgray, font=\small\sffamily] at (2.75,-0.4) {#1};
+    \end{tikzpicture}%
+}
+
+\newcommand{\skillbadge}[1]{%
+    \tikz[baseline=(text.base)]{
+        \node[draw=secondary, fill=secondary!10, rounded corners=8pt, 
+              inner sep=4pt, font=\small\sffamily] (text) {#1};
+    }%
+}
+
+\begin{document}
+\pagestyle{empty}
+\sffamily 
+
+\begin{tikzpicture}[remember picture,overlay]
+
+    \fill[primary!5] ([shift={(-1cm,-1cm)}]current page.north west)
+        rectangle ([shift={(1cm,1cm)}]current page.south east);
+    
+    \fill[primary!20] ([shift={(-1cm,-1cm)}]current page.north west)
+        -- ([shift={(-1cm,-3cm)}]current page.north west)
+        -- ([shift={(-3cm,-1cm)}]current page.north west) -- cycle;
+    
+    \fill[secondary!20] ([shift={(1cm,1cm)}]current page.south east)
+        -- ([shift={(1cm,3cm)}]current page.south east)
+        -- ([shift={(3cm,1cm)}]current page.south east) -- cycle;
+    
+    \draw[line width=3pt, primary] 
+        ([shift={(-1cm,-1cm)}]current page.north west)
+        rectangle ([shift={(1cm,1cm)}]current page.south east);
+    
+    \draw[line width=1pt, secondary, dashed] 
+        ([shift={(-0.8cm,-0.8cm)}]current page.north west)
+        rectangle ([shift={(0.8cm,0.8cm)}]current page.south east);
+    
+    \foreach \x in {-8,-6,...,8} {
+        \foreach \y in {-4,-2,...,4} {
+            \fill[primary!3] (\x,\y) circle (0.05);
+        }
+    }
+\end{tikzpicture}
+
+\begin{center}
+    \vspace*{0.3cm}
+    
+    {\color{primary}\faAward\hspace{0.2cm}}{\Huge\bfseries\color{darkgray} Certificate of Completion}\\[0.8cm]
+    
+    \tikz{\draw[secondary, line width=2pt, rounded corners] (0,0) -- (8,0);}\\[0.8cm]
+    
+    {\Large\color{darkgray} This is to certify that}\\[0.4cm]
+    
+    \begin{tikzpicture}
+        \draw[primary, line width=2pt, rounded corners=2pt] (0,0) rectangle (10,1);
+        \fill[primary!5] (0,0) rectangle (10,1);
+        \node at (5,0.5) {\Large\textit{\color{darkgray}Student Name}};
+    \end{tikzpicture}\\[0.6cm]
+    
+    {\Large\color{darkgray} has successfully completed the}\\[0.4cm]
+    
+    \begin{tikzpicture}
+        \node[fill=primary, text=white, rounded corners=10pt, 
+              inner sep=12pt, font=\huge\bfseries] 
+              {HTML5 Web Development Course};
+    \end{tikzpicture}\\[0.6cm]
+    
+    {\Large\color{darkgray} demonstrating proficiency in}\\[0.4cm]
+    
+    \begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \centering
+        \skillbadge{HTML5 Document Structure} \hspace{0.2cm}
+        \skillbadge{Semantic Elements} \hspace{0.2cm}
+        \skillbadge{Forms \& Inputs}\\[0.3cm]
+        \skillbadge{Media Integration} \hspace{0.2cm}
+        \skillbadge{Tables \& Lists} \hspace{0.2cm}
+        \skillbadge{Navigation}\\[0.3cm]
+        \skillbadge{Interactive Elements} \hspace{0.2cm}
+        \skillbadge{HTML5 APIs} \hspace{0.2cm}
+        \skillbadge{Best Practices}\\[0.3cm]
+        \skillbadge{Modern Web Standards} \hspace{0.2cm}
+        \skillbadge{Accessibility}
+    \end{minipage}
+    \end{center}
+    
+    \vspace{0.6cm}
+    {\Large\color{darkgray} with excellence and dedication}\\[0.8cm]
+    
+    \begin{center}
+        \begin{minipage}{0.7\textwidth}
+            \centering
+            \modernsignatureline{Course Instructor}
+            \hspace{3cm}
+            \modernsignatureline{Date of Completion}
+        \end{minipage}
+    \end{center}
+    
+    \vspace{0.6cm}
+
+    \begin{tikzpicture}
+        \node[fill=lightgray, rounded corners=5pt, inner sep=8pt, 
+              font=\small\color{darkgray}] 
+              {Certificate ID: \texttt{WD-HTML-\the\year-\#\the\month\the\day} 
+               \hspace{1cm} {\color{gold}\faStar} Verified Achievement {\color{gold}\faStar}};
+    \end{tikzpicture}
+\end{center}
+
+\end{document}
