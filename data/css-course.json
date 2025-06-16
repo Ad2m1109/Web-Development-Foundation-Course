@@ -1,59 +1,85 @@
 {
-  "title": "CSS Reference Guide",
+  "title": "Complete CSS Course",
   "sections": [
+    {
+      "id": "css-basics",
+      "icon": "🎨",
+      "title": "CSS Basics",
+      "description": "Learn CSS syntax, how to add CSS to HTML, and basic concepts.",
+      "content": {
+        "title": "Getting Started with CSS",
+        "codeExample": "/* CSS Syntax */\nselector {\n  property: value;\n}\n\n/* Example */\nh1 {\n  color: blue;\n  font-size: 24px;\n}\n\n/* Classes */\n.my-class {\n  background: yellow;\n}\n\n/* IDs */\n#my-id {\n  margin: 20px;\n}",
+        "exercise": {
+          "instructions": "Style the heading blue and give the paragraph a yellow background using a class.",
+          "defaultHtml": "<h1>Welcome to CSS</h1>\n<p class=\"highlight\">This is a paragraph to style.</p>",
+          "hint": {
+            "elements": [
+              "h1 { color: blue; }",
+              ".highlight { background: yellow; }"
+            ]
+          }
+        }
+      }
+    },
     {
       "id": "selectors",
       "icon": "🔎",
-      "title": "Selectors",
-      "description": "Learn how to select HTML elements to style them with CSS.",
+      "title": "CSS Selectors",
+      "description": "Master different types of CSS selectors to target elements precisely.",
       "content": {
-        "title": "Basic Selectors",
-        "codeExample": "/* CSS */\np {\n  color: blue;\n}\n#main-title {\n  font-size: 2rem;\n}\n.highlight {\n  background: yellow;\n}",
+        "title": "All CSS Selectors",
+        "codeExample": "/* Element Selector */\np { color: blue; }\n\n/* Class Selector */\n.highlight { background: yellow; }\n\n/* ID Selector */\n#header { font-size: 2rem; }\n\n/* Descendant Selector */\ndiv p { margin: 10px; }\n\n/* Child Selector */\ndiv > p { padding: 5px; }\n\n/* Attribute Selector */\ninput[type=\"text\"] { border: 1px solid #ccc; }\n\n/* Pseudo-class */\na:hover { color: red; }\n\n/* Universal Selector */\n* { box-sizing: border-box; }",
         "exercise": {
-          "instructions": "Try changing the color of the paragraph and the background of the highlighted text.",
-          "defaultHtml": "<h1 id=\"main-title\">Hello CSS!</h1>\n<p>This is a <span class=\"highlight\">highlighted</span> paragraph.</p>",
+          "instructions": "Style different elements using various selectors. Make links red on hover.",
+          "defaultHtml": "<div id=\"header\">\n  <h1>Main Title</h1>\n  <p class=\"highlight\">Highlighted paragraph</p>\n  <a href=\"#\">Hover over this link</a>\n  <input type=\"text\" placeholder=\"Text input\">\n</div>\n<p>Outside paragraph</p>",
           "hint": {
             "elements": [
-              "<h1 id=\"main-title\">Hello CSS!</h1> (ID: main-title)",
-              "<p>This is a <span class=\"highlight\">highlighted</span> paragraph.</p> (Class: highlight)"
+              "#header { /* styles for header */ }",
+              ".highlight { /* styles for class */ }",
+              "a:hover { color: red; }",
+              "input[type=\"text\"] { /* input styles */ }"
             ]
           }
         }
       }
     },
     {
-      "id": "colors",
+      "id": "colors-backgrounds",
       "icon": "🌈",
-      "title": "Colors",
-      "description": "Learn how to use colors in CSS using different formats and color properties.",
+      "title": "Colors & Backgrounds",
+      "description": "Learn all about colors, gradients, and background properties.",
       "content": {
-        "title": "Color Properties",
-        "codeExample": "/* CSS Colors */\n.box {\n  color: #50FA7B;              /* Hex */\n  background: rgb(80,250,123);  /* RGB */\n  border: 2px solid hsl(134, 95%, 65%); /* HSL */\n  opacity: 0.9;                /* Transparency */\n}",
+        "title": "Colors and Backgrounds",
+        "codeExample": "/* Color Formats */\n.box1 { color: red; }                    /* Named */\n.box2 { color: #FF5733; }                /* Hex */\n.box3 { color: rgb(255, 87, 51); }       /* RGB */\n.box4 { color: rgba(255, 87, 51, 0.8); } /* RGBA */\n.box5 { color: hsl(9, 100%, 60%); }      /* HSL */\n\n/* Backgrounds */\n.bg-solid { background-color: #f0f0f0; }\n.bg-gradient {\n  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);\n}\n.bg-image {\n  background-image: url('pattern.png');\n  background-size: cover;\n  background-position: center;\n}",
         "exercise": {
-          "instructions": "Create a colorful box with different color formats. Try using hex, rgb, and hsl.",
-          "defaultHtml": "<div class=\"box\">Color Box</div>",
+          "instructions": "Create boxes with different background colors and gradients.",
+          "defaultHtml": "<div class=\"box1\">Named Color</div>\n<div class=\"box2\">Hex Color</div>\n<div class=\"bg-gradient\">Gradient Background</div>",
           "hint": {
             "elements": [
-              "<div class=\"box\">Color Box</div> (Class: box)"
+              ".box1 { background: red; }",
+              ".box2 { background: #ff6b6b; }",
+              ".bg-gradient { background: linear-gradient(...); }"
             ]
           }
         }
       }
     },
     {
-      "id": "text",
+      "id": "typography",
       "icon": "🅰️",
-      "title": "Text Styling",
-      "description": "Master text properties for beautiful typography.",
+      "title": "Typography",
+      "description": "Master text styling with fonts, sizes, spacing, and more.",
       "content": {
-        "title": "Typography Properties",
-        "codeExample": "/* Typography */\n.text {\n  font-family: 'Arial', sans-serif;\n  font-size: 1.2rem;\n  font-weight: bold;\n  line-height: 1.6;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}",
+        "title": "Typography and Text Styling",
+        "codeExample": "/* Font Properties */\n.text {\n  font-family: 'Helvetica', Arial, sans-serif;\n  font-size: 1.2rem;\n  font-weight: bold;\n  font-style: italic;\n  line-height: 1.6;\n}\n\n/* Text Properties */\n.styled-text {\n  text-align: center;\n  text-decoration: underline;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  word-spacing: 4px;\n  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\n}\n\n/* Web Fonts */\n@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');\n.web-font { font-family: 'Roboto', sans-serif; }",
         "exercise": {
-          "instructions": "Style the text below using different typography properties.",
-          "defaultHtml": "<p class=\"text\">Style this text with CSS typography properties!</p>",
+          "instructions": "Style the text with different typography properties and create a text shadow effect.",
+          "defaultHtml": "<h1 class=\"title\">Beautiful Typography</h1>\n<p class=\"styled-text\">This text should be styled with various typography properties.</p>\n<p class=\"web-font\">This uses a web font.</p>",
           "hint": {
             "elements": [
-              "<p class=\"text\">Style this text with CSS typography properties!</p> (Class: text)"
+              ".title { font-size: 2rem; text-shadow: ...; }",
+              ".styled-text { text-transform: uppercase; letter-spacing: 2px; }",
+              ".web-font { font-family: 'Roboto', sans-serif; }"
             ]
           }
         }
@@ -62,37 +88,82 @@
     {
       "id": "box-model",
       "icon": "📦",
-      "title": "Box Model",
-      "description": "Understand the CSS box model and spacing properties.",
+      "title": "CSS Box Model",
+      "description": "Understand padding, margin, border, and content areas.",
       "content": {
-        "title": "Box Model Properties",
-        "codeExample": "/* Box Model */\n.container {\n  width: 200px;\n  height: 200px;\n  padding: 20px;\n  border: 5px solid #50FA7B;\n  margin: 15px;\n  box-sizing: border-box;\n}",
+        "title": "The CSS Box Model",
+        "codeExample": "/* Box Model Components */\n.box {\n  width: 200px;\n  height: 100px;\n  padding: 20px;           /* Inside spacing */\n  border: 5px solid #333;  /* Border */\n  margin: 15px;            /* Outside spacing */\n  box-sizing: border-box;  /* Include padding/border in width */\n}\n\n/* Border Styles */\n.border-styles {\n  border-top: 2px solid red;\n  border-right: 4px dashed blue;\n  border-bottom: 6px dotted green;\n  border-left: 8px double orange;\n  border-radius: 10px;\n}\n\n/* Margin and Padding Shorthand */\n.spacing {\n  margin: 10px 15px 20px 25px;  /* top right bottom left */\n  padding: 10px 20px;           /* vertical horizontal */\n}",
         "exercise": {
-          "instructions": "Create a box with specific dimensions, padding, border, and margin.",
-          "defaultHtml": "<div class=\"container\">Box Model Example</div>",
+          "instructions": "Create boxes with different padding, margins, and border styles.",
+          "defaultHtml": "<div class=\"box\">Box Model Example</div>\n<div class=\"border-styles\">Different Borders</div>\n<div class=\"spacing\">Spacing Example</div>",
           "hint": {
             "elements": [
-              "<div class=\"container\">Box Model Example</div> (Class: container)"
+              ".box { width: 200px; padding: 20px; margin: 15px; border: 5px solid #333; }",
+              ".border-styles { border-radius: 10px; border: 2px solid red; }",
+              ".spacing { margin: 10px; padding: 20px; }"
             ]
           }
         }
       }
     },
     {
-      "id": "layout",
-      "icon": "📐",
-      "title": "Layout",
-      "description": "Master Flexbox and Grid layouts for modern web design.",
+      "id": "positioning",
+      "icon": "📍",
+      "title": "CSS Positioning",
+      "description": "Learn static, relative, absolute, fixed, and sticky positioning.",
       "content": {
-        "title": "Flexbox & Grid",
-        "codeExample": "/* Flexbox */\n.flex-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 10px;\n}\n\n/* Grid */\n.grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 20px;\n}",
+        "title": "CSS Positioning Methods",
+        "codeExample": "/* Static (default) */\n.static { position: static; }\n\n/* Relative */\n.relative {\n  position: relative;\n  top: 20px;\n  left: 30px;\n}\n\n/* Absolute */\n.absolute {\n  position: absolute;\n  top: 50px;\n  right: 20px;\n}\n\n/* Fixed */\n.fixed {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n}\n\n/* Sticky */\n.sticky {\n  position: sticky;\n  top: 0;\n}\n\n/* Z-index for layering */\n.overlay {\n  position: absolute;\n  z-index: 10;\n}",
         "exercise": {
-          "instructions": "Create a responsive layout using either Flexbox or Grid.",
-          "defaultHtml": "<div class=\"flex-container\">\n  <div>Item 1</div>\n  <div>Item 2</div>\n  <div>Item 3</div>\n</div>",
+          "instructions": "Position elements using different positioning methods.",
+          "defaultHtml": "<div class=\"container\" style=\"height: 300px; border: 2px solid #ccc; position: relative;\">\n  <div class=\"relative\">Relative Position</div>\n  <div class=\"absolute\">Absolute Position</div>\n  <div class=\"sticky\">Sticky Position</div>\n</div>",
           "hint": {
             "elements": [
-              "<div class=\"flex-container\"> (Main container)",
-              "Three inner <div> elements for layout items"
+              ".relative { position: relative; top: 20px; left: 30px; }",
+              ".absolute { position: absolute; top: 50px; right: 20px; }",
+              ".sticky { position: sticky; top: 0; }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "flexbox",
+      "icon": "🔧",
+      "title": "Flexbox Layout",
+      "description": "Master flexible box layout for one-dimensional layouts.",
+      "content": {
+        "title": "CSS Flexbox",
+        "codeExample": "/* Flex Container */\n.flex-container {\n  display: flex;\n  flex-direction: row;        /* row, column, row-reverse, column-reverse */\n  justify-content: space-between; /* flex-start, center, space-around, space-evenly */\n  align-items: center;        /* flex-start, flex-end, center, stretch */\n  flex-wrap: wrap;           /* nowrap, wrap, wrap-reverse */\n  gap: 20px;\n}\n\n/* Flex Items */\n.flex-item {\n  flex: 1;                   /* flex-grow flex-shrink flex-basis */\n  flex-basis: 200px;\n}\n\n.flex-item-2 {\n  flex-grow: 2;              /* Takes 2x more space */\n}\n\n.flex-item-fixed {\n  flex: 0 0 100px;           /* Fixed width */\n}",
+        "exercise": {
+          "instructions": "Create a flexible layout with items that grow and shrink.",
+          "defaultHtml": "<div class=\"flex-container\">\n  <div class=\"flex-item\">Item 1</div>\n  <div class=\"flex-item-2\">Item 2 (Grows)</div>\n  <div class=\"flex-item\">Item 3</div>\n  <div class=\"flex-item-fixed\">Fixed</div>\n</div>",
+          "hint": {
+            "elements": [
+              ".flex-container { display: flex; justify-content: space-between; }",
+              ".flex-item { flex: 1; }",
+              ".flex-item-2 { flex-grow: 2; }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "grid",
+      "icon": "📐",
+      "title": "CSS Grid Layout",
+      "description": "Create complex two-dimensional layouts with CSS Grid.",
+      "content": {
+        "title": "CSS Grid System",
+        "codeExample": "/* Grid Container */\n.grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */\n  grid-template-rows: 100px auto 50px;   /* 3 rows with specific heights */\n  gap: 20px;\n  grid-template-areas:\n    \"header header header\"\n    \"sidebar main main\"\n    \"footer footer footer\";\n}\n\n/* Grid Items */\n.header { grid-area: header; }\n.sidebar { grid-area: sidebar; }\n.main { grid-area: main; }\n.footer { grid-area: footer; }\n\n/* Alternative Grid Item Positioning */\n.item {\n  grid-column: 1 / 3;        /* Span from column 1 to 3 */\n  grid-row: 2 / 4;           /* Span from row 2 to 4 */\n}",
+        "exercise": {
+          "instructions": "Create a grid layout with header, sidebar, main content, and footer.",
+          "defaultHtml": "<div class=\"grid-container\">\n  <div class=\"header\">Header</div>\n  <div class=\"sidebar\">Sidebar</div>\n  <div class=\"main\">Main Content</div>\n  <div class=\"footer\">Footer</div>\n</div>",
+          "hint": {
+            "elements": [
+              ".grid-container { display: grid; grid-template-columns: repeat(3, 1fr); }",
+              ".header { grid-area: header; }",
+              "Use grid-template-areas for layout"
             ]
           }
         }
@@ -102,35 +173,210 @@
       "id": "responsive",
       "icon": "📱",
       "title": "Responsive Design",
-      "description": "Create websites that work on all devices.",
+      "description": "Create layouts that work on all screen sizes using media queries.",
       "content": {
-        "title": "Media Queries",
-        "codeExample": "/* Responsive Design */\n.card {\n  width: 300px;\n  margin: 20px;\n}\n\n@media (max-width: 768px) {\n  .card {\n    width: 100%;\n    margin: 10px;\n  }\n}",
+        "title": "Responsive Web Design",
+        "codeExample": "/* Mobile First Approach */\n.container {\n  width: 100%;\n  padding: 10px;\n}\n\n/* Tablet */\n@media (min-width: 768px) {\n  .container {\n    width: 750px;\n    margin: 0 auto;\n    padding: 20px;\n  }\n}\n\n/* Desktop */\n@media (min-width: 1024px) {\n  .container {\n    width: 1000px;\n    padding: 30px;\n  }\n}\n\n/* High DPI Displays */\n@media (-webkit-min-device-pixel-ratio: 2) {\n  .logo {\n    background-image: url('logo@2x.png');\n  }\n}\n\n/* Flexible Units */\n.responsive-text {\n  font-size: clamp(1rem, 4vw, 2rem);\n}",
         "exercise": {
-          "instructions": "Create a responsive card that adjusts its width on different screen sizes.",
-          "defaultHtml": "<div class=\"card\">This is a responsive card</div>",
+          "instructions": "Create a responsive container that changes width at different breakpoints.",
+          "defaultHtml": "<div class=\"container\">\n  <h2 class=\"responsive-text\">Responsive Title</h2>\n  <p>This container should change size based on screen width. Try resizing your browser!</p>\n</div>",
           "hint": {
             "elements": [
-              "<div class=\"card\">This is a responsive card</div> (Class: card)"
+              ".container { width: 100%; }",
+              "@media (min-width: 768px) { .container { width: 750px; } }",
+              ".responsive-text { font-size: clamp(1rem, 4vw, 2rem); }"
             ]
           }
         }
       }
     },
     {
-      "id": "transitions-animations",
-      "icon": "🎬",
-      "title": "Transitions & Animations",
-      "description": "Add smooth transitions and engaging animations.",
+      "id": "transitions",
+      "icon": "🔄",
+      "title": "CSS Transitions",
+      "description": "Add smooth transitions between CSS property changes.",
       "content": {
-        "title": "CSS Animations",
-        "codeExample": "/* Animation */\n@keyframes bounce {\n  0% { transform: translateY(0); }\n  50% { transform: translateY(-20px); }\n  100% { transform: translateY(0); }\n}\n\n.animated {\n  animation: bounce 1s infinite;\n  transition: all 0.3s ease;\n}",
+        "title": "CSS Transitions",
+        "codeExample": "/* Basic Transition */\n.button {\n  background: #3498db;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  color: white;\n  transition: background 0.3s ease;\n}\n\n.button:hover {\n  background: #2980b9;\n}\n\n/* Multiple Properties */\n.card {\n  transform: scale(1);\n  box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.card:hover {\n  transform: scale(1.05);\n  box-shadow: 0 8px 25px rgba(0,0,0,0.2);\n}\n\n/* Transition Timing Functions */\n.timing-examples {\n  transition-timing-function: ease-in-out; /* ease, linear, ease-in, ease-out */\n  transition-delay: 0.1s;\n}",
         "exercise": {
-          "instructions": "Create a bouncing animation for the box below.",
-          "defaultHtml": "<div class=\"animated\">Animated Box</div>",
+          "instructions": "Create buttons and cards with smooth hover transitions.",
+          "defaultHtml": "<button class=\"button\">Hover Me</button>\n<div class=\"card\">\n  <h3>Hover Card</h3>\n  <p>This card should scale and change shadow on hover.</p>\n</div>",
           "hint": {
             "elements": [
-              "<div class=\"animated\">Animated Box</div> (Class: animated)"
+              ".button { transition: background 0.3s ease; }",
+              ".card { transition: all 0.3s ease; }",
+              ".card:hover { transform: scale(1.05); }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "animations",
+      "icon": "🎬",
+      "title": "CSS Animations",
+      "description": "Create complex animations using keyframes and animation properties.",
+      "content": {
+        "title": "CSS Keyframe Animations",
+        "codeExample": "/* Keyframe Definition */\n@keyframes bounce {\n  0% {\n    transform: translateY(0);\n  }\n  50% {\n    transform: translateY(-30px);\n  }\n  100% {\n    transform: translateY(0);\n  }\n}\n\n/* Animation Properties */\n.animated-element {\n  animation-name: bounce;\n  animation-duration: 1s;\n  animation-iteration-count: infinite;\n  animation-timing-function: ease-in-out;\n  animation-direction: alternate;\n}\n\n/* Shorthand */\n.spin {\n  animation: rotate 2s linear infinite;\n}\n\n@keyframes rotate {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n\n/* Complex Animation */\n@keyframes pulse {\n  0% { opacity: 1; transform: scale(1); }\n  50% { opacity: 0.7; transform: scale(1.1); }\n  100% { opacity: 1; transform: scale(1); }\n}",
+        "exercise": {
+          "instructions": "Create bouncing and spinning animations using keyframes.",
+          "defaultHtml": "<div class=\"animated-element\">Bouncing Box</div>\n<div class=\"spin\">⚙️ Spinning Gear</div>\n<div class=\"pulse\">Pulsing Element</div>",
+          "hint": {
+            "elements": [
+              "@keyframes bounce { 0% { transform: translateY(0); } 50% { transform: translateY(-30px); } }",
+              ".animated-element { animation: bounce 1s infinite; }",
+              ".spin { animation: rotate 2s linear infinite; }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "transforms",
+      "icon": "🔧",
+      "title": "CSS Transforms",
+      "description": "Transform elements with translate, rotate, scale, and skew.",
+      "content": {
+        "title": "CSS 2D and 3D Transforms",
+        "codeExample": "/* 2D Transforms */\n.translate { transform: translate(50px, 100px); }\n.rotate { transform: rotate(45deg); }\n.scale { transform: scale(1.5); }\n.skew { transform: skew(20deg, 10deg); }\n\n/* Multiple Transforms */\n.combined {\n  transform: translate(50px, 50px) rotate(45deg) scale(1.2);\n}\n\n/* 3D Transforms */\n.perspective-container {\n  perspective: 1000px;\n}\n\n.cube {\n  transform-style: preserve-3d;\n  transform: rotateX(30deg) rotateY(30deg);\n}\n\n/* Transform Origin */\n.transform-origin {\n  transform-origin: top left;\n  transform: rotate(45deg);\n}\n\n/* Interactive Transform */\n.hover-transform:hover {\n  transform: translateY(-10px) scale(1.1);\n}",
+        "exercise": {
+          "instructions": "Create elements with different transform effects and hover interactions.",
+          "defaultHtml": "<div class=\"translate\">Translated</div>\n<div class=\"rotate\">Rotated</div>\n<div class=\"combined\">Combined Transforms</div>\n<div class=\"hover-transform\">Hover Transform</div>",
+          "hint": {
+            "elements": [
+              ".translate { transform: translate(50px, 100px); }",
+              ".rotate { transform: rotate(45deg); }",
+              ".hover-transform:hover { transform: translateY(-10px) scale(1.1); }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "pseudo-classes",
+      "icon": "🎭",
+      "title": "Pseudo-classes & Pseudo-elements",
+      "description": "Style elements based on their state and create virtual elements.",
+      "content": {
+        "title": "Pseudo-classes and Pseudo-elements",
+        "codeExample": "/* Pseudo-classes */\na:link { color: blue; }\na:visited { color: purple; }\na:hover { color: red; }\na:active { color: orange; }\n\n/* Form Pseudo-classes */\ninput:focus { border-color: blue; }\ninput:disabled { opacity: 0.5; }\ninput:checked { background: green; }\n\n/* Structural Pseudo-classes */\nli:first-child { font-weight: bold; }\nli:last-child { border-bottom: none; }\nli:nth-child(2n) { background: #f0f0f0; }\nli:nth-child(3n+1) { color: red; }\n\n/* Pseudo-elements */\np::first-line { font-weight: bold; }\np::first-letter { font-size: 2em; float: left; }\n\n/* Before and After */\n.quote::before { content: '\"'; }\n.quote::after { content: '\"'; }\n\n.button::after {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 2px;\n  background: blue;\n  bottom: 0;\n  left: 0;\n}",
+        "exercise": {
+          "instructions": "Style links, form elements, and create decorative elements with pseudo-classes and pseudo-elements.",
+          "defaultHtml": "<ul>\n  <li><a href=\"#\">First Link</a></li>\n  <li><a href=\"#\">Second Link</a></li>\n  <li><a href=\"#\">Third Link</a></li>\n  <li><a href=\"#\">Fourth Link</a></li>\n</ul>\n<p class=\"quote\">This is a quoted paragraph with special styling.</p>\n<input type=\"text\" placeholder=\"Focus me\">\n<button class=\"button\">Button with underline</button>",
+          "hint": {
+            "elements": [
+              "a:hover { color: red; }",
+              "li:nth-child(2n) { background: #f0f0f0; }",
+              ".quote::before { content: '\"'; }",
+              "input:focus { border-color: blue; }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "css-variables",
+      "icon": "🔧",
+      "title": "CSS Variables",
+      "description": "Use custom properties for maintainable and dynamic styles.",
+      "content": {
+        "title": "CSS Custom Properties (Variables)",
+        "codeExample": "/* Global Variables */\n:root {\n  --primary-color: #3498db;\n  --secondary-color: #2ecc71;\n  --font-size-base: 16px;\n  --spacing-unit: 8px;\n  --border-radius: 4px;\n}\n\n/* Using Variables */\n.button {\n  background-color: var(--primary-color);\n  font-size: var(--font-size-base);\n  padding: calc(var(--spacing-unit) * 2);\n  border-radius: var(--border-radius);\n}\n\n/* Local Variables */\n.card {\n  --card-padding: 20px;\n  --card-shadow: 0 2px 10px rgba(0,0,0,0.1);\n  \n  padding: var(--card-padding);\n  box-shadow: var(--card-shadow);\n}\n\n/* Fallback Values */\n.element {\n  color: var(--text-color, #333); /* #333 if --text-color is not defined */\n}\n\n/* Dynamic Variables with JavaScript */\n.theme-toggle {\n  background: var(--theme-bg, white);\n  color: var(--theme-text, black);\n}",
+        "exercise": {
+          "instructions": "Create a design system using CSS variables for colors, spacing, and typography.",
+          "defaultHtml": "<div class=\"card\">\n  <h3>Card Title</h3>\n  <p>This card uses CSS variables for consistent styling.</p>\n  <button class=\"button\">Primary Button</button>\n</div>\n<div class=\"theme-toggle\">Themed Element</div>",
+          "hint": {
+            "elements": [
+              ":root { --primary-color: #3498db; --spacing: 8px; }",
+              ".button { background: var(--primary-color); }",
+              ".card { padding: calc(var(--spacing) * 2); }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "advanced-selectors",
+      "icon": "🎯",
+      "title": "Advanced Selectors",
+      "description": "Master complex selectors and combinators for precise targeting.",
+      "content": {
+        "title": "Advanced CSS Selectors",
+        "codeExample": "/* Attribute Selectors */\n[data-type=\"warning\"] { color: orange; }\n[class*=\"btn\"] { padding: 10px; }        /* Contains */\n[class^=\"btn\"] { border-radius: 4px; }    /* Starts with */\n[class$=\"-lg\"] { font-size: 1.2em; }      /* Ends with */\n\n/* Combinators */\ndiv + p { margin-top: 0; }               /* Adjacent sibling */\nh2 ~ p { color: gray; }                  /* General sibling */\narticle > p { font-size: 1.1em; }        /* Direct child */\nsection p { line-height: 1.6; }          /* Descendant */\n\n/* Advanced Pseudo-selectors */\n:not(.exclude) { opacity: 1; }\ninput:valid { border-color: green; }\ninput:invalid { border-color: red; }\n:empty { display: none; }\n:target { background: yellow; }\n\n/* Complex Selectors */\ntable tr:nth-of-type(odd) td:first-child {\n  font-weight: bold;\n}\n\n.menu li:hover > ul {\n  display: block;\n}",
+        "exercise": {
+          "instructions": "Use advanced selectors to style specific elements based on attributes and relationships.",
+          "defaultHtml": "<article>\n  <h2>Article Title</h2>\n  <p>First paragraph after heading.</p>\n  <p>Second paragraph (sibling).</p>\n  <div data-type=\"warning\">Warning message</div>\n  <div>\n    <p>Nested paragraph (direct child)</p>\n  </div>\n</article>\n<input type=\"email\" required placeholder=\"Email\">\n<div class=\"btn-primary btn-lg\">Button</div>",
+          "hint": {
+            "elements": [
+              "h2 + p { /* first paragraph after h2 */ }",
+              "[data-type=\"warning\"] { color: orange; }",
+              "[class*=\"btn\"] { padding: 10px; }",
+              "input:invalid { border-color: red; }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "css-functions",
+      "icon": "🧮",
+      "title": "CSS Functions",
+      "description": "Use CSS functions for calculations, gradients, and dynamic values.",
+      "content": {
+        "title": "CSS Functions and Calculations",
+        "codeExample": "/* Mathematical Functions */\n.calc-width {\n  width: calc(100% - 40px);\n  margin: calc(1rem + 10px);\n}\n\n/* Min/Max Functions */\n.responsive {\n  width: min(90%, 800px);\n  height: max(200px, 50vh);\n  font-size: clamp(1rem, 4vw, 2rem);\n}\n\n/* Color Functions */\n.colors {\n  background: hsl(200, 100%, 50%);\n  border-color: hsla(200, 100%, 50%, 0.5);\n  color: rgb(255, 255, 255);\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);\n}\n\n/* Gradient Functions */\n.gradients {\n  background: linear-gradient(45deg, red, blue);\n  background: radial-gradient(circle, red, blue);\n  background: conic-gradient(red, yellow, green, red);\n}\n\n/* URL and Counter Functions */\n.functions {\n  background-image: url('image.jpg');\n  content: counter(section);\n  list-style: none;\n}\n\n/* Custom Function with Variables */\n.dynamic {\n  transform: rotate(var(--rotation, 0deg));\n  scale: var(--scale, 1);\n}",
+        "exercise": {
+          "instructions": "Use CSS functions to create responsive layouts and dynamic styling.",
+          "defaultHtml": "<div class=\"calc-width\">Calculated Width</div>\n<div class=\"responsive\">Responsive Element</div>\n<div class=\"gradients\">Gradient Background</div>\n<div class=\"dynamic\">Dynamic Transform</div>",
+          "hint": {
+            "elements": [
+              ".calc-width { width: calc(100% - 40px); }",
+              ".responsive { width: min(90%, 800px); font-size: clamp(1rem, 4vw, 2rem); }",
+              ".gradients { background: linear-gradient(45deg, red, blue); }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "modern-css",
+      "icon": "🚀",
+      "title": "Modern CSS Features",
+      "description": "Explore cutting-edge CSS features and best practices.",
+      "content": {
+        "title": "Modern CSS Features",
+        "codeExample": "/* Container Queries */\n@container (min-width: 400px) {\n  .card { \n    display: grid;\n    grid-template-columns: 1fr 2fr;\n  }\n}\n\n/* Logical Properties */\n.logical {\n  margin-inline: 20px;        /* margin-left and margin-right */\n  padding-block: 10px;        /* padding-top and padding-bottom */\n  border-inline-start: 2px solid red;\n}\n\n/* Cascade Layers */\n@layer base, components, utilities;\n\n@layer base {\n  h1 { font-size: 2rem; }\n}\n\n@layer components {\n  .button { padding: 10px 20px; }\n}\n\n/* Subgrid */\n.grid-parent {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n}\n\n.grid-child {\n  display: grid;\n  grid-template-columns: subgrid;\n}\n\n/* CSS Nesting */\n.card {\n  padding: 20px;\n  \n  & .title {\n    font-size: 1.5rem;\n    \n    &:hover {\n      color: blue;\n    }\n  }\n  \n  @media (max-width: 768px) {\n    padding: 10px;\n  }\n}\n\n/* Accent Color */\ninput[type=\"checkbox\"] {\n  accent-color: #ff6b6b;\n}",
+        "exercise": {
+          "instructions": "Experiment with modern CSS features like logical properties and CSS nesting.",
+          "defaultHtml": "<div class=\"card\">\n  <h2 class=\"title\">Modern CSS Card</h2>\n  <p class=\"logical\">This uses logical properties for internationalization.</p>\n  <input type=\"checkbox\" checked> Styled checkbox\n</div>",
+          "hint": {
+            "elements": [
+              ".logical { margin-inline: 20px; padding-block: 10px; }",
+              ".card { & .title { font-size: 1.5rem; } }",
+              "input[type=\"checkbox\"] { accent-color: #ff6b6b; }"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "best-practices",
+      "icon": "✨",
+      "title": "CSS Best Practices",
+      "description": "Learn optimization techniques and maintainable CSS practices.",
+      "content": {
+        "title": "CSS Best Practices and Optimization",
+        "codeExample": "/* BEM Methodology */\n.block { }\n.block__element { }\n.block--modifier { }\n.block__element--modifier { }\n\n/* Performance Optimizations */\n.optimized {\n  will-change: transform;     /* Hint to browser for optimization */\n  transform: translateZ(0);   /* Force hardware acceleration */\n  contain: layout style;      /* Containment for performance */\n}\n\n/* CSS Reset/Normalize */\n*, *::before, *::after {\n  box-sizing: border-box;\n}\n\nhtml {\n  line-height: 1.15;\n  -webkit-text-size-adjust: 100%;\n}\n\n/* Utility Classes */\n.visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n\n.sr-only { /* Screen reader only */\n  position: absolute;\n  left: -10000px;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;\n}\n\n/* Progressive Enhancement */\n@supports (display: grid) {\n  .grid-enhanced {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n  }\n}",
+        "exercise": {
+          "instructions": "Apply best practices like BEM naming and utility classes to create maintainable CSS.",
+          "defaultHtml": "<div class=\"card card--featured\">\n  <h3 class=\"card__title\">BEM Example</h3>\n  <p class=\"card__content\">This follows BEM methodology.</p>\n  <button class=\"card__button card__button--primary\">Action</button>\n</div>\n<div class=\"visually-hidden\">Hidden but accessible content</div>",
+          "hint": {
+            "elements": [
+              ".card { /* base styles */ }",
+              ".card--featured { /* modifier styles */ }",
+              ".card__title { /* element styles */ }",
+              ".visually-hidden { position: absolute; width: 1px; height: 1px; }"
             ]
           }
         }
